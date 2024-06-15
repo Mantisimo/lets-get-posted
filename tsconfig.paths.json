@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@core/utils": ["./src/core/utils/index.ts"],
+      "@icons": ["./src/components/icons/index.ts"],
+      "@config": ["./src/core/consts/index.ts"],
+    }
+  }
+}
