@@ -4,7 +4,7 @@ import { siteName } from "@config";
 export const Layout = () => {
   return (
     <div className="min-h-full">
-      <div className="bg-indigo-600 pb-32">
+      <div className="bg-orange-600 pb-32">
         <header className="py-10">
           <div className="max-w-7xl px-8 lg:px-12">
             <h1 className="text-3xl font-bold tracking-tight text-white">

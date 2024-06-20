@@ -35,7 +35,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
     
     console.info("post response", response);
-    // Check if the response is successful
+
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
     }
