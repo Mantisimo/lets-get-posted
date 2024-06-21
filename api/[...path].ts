@@ -2,7 +2,7 @@ import { VercelRequest, VercelResponse } from "@vercel/node";
 import fetch, { Headers, RequestInit } from "node-fetch";
 
 const API_ENDPOINT = "https://dummyapi.io/data/v1";
-const API_KEY = "628cfd76d7c13ab387fde193";
+const API_KEY = process.env.API_KEY || "";
 
 export default async (req: VercelRequest, res: VercelResponse) => {
   // Takes vercels mangled request url... and massages it into a regular path stripping out the /api prefix
@@ -32,9 +32,6 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     };
 
     const response = await fetch(targetUrl, fetchOptions);
-
-    
-    console.info("post response", response);
 
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
